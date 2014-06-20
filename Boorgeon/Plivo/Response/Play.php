@@ -10,6 +10,13 @@
 class Boorgeon_Plivo_Response_Play extends Boorgeon_Plivo_Response_Element
 {
 
+    public function __construct($url)
+    {
+        parent::__construct();
+
+        $this->setValue($url);
+    }
+
     /**
      * Get loop
      *

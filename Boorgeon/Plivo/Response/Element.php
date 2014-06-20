@@ -104,21 +104,29 @@ class Boorgeon_Plivo_Response_Element extends Boorgeon_Plivo_Object
         return '</' . $this->getName() . '>';
     }
 
+    public function getFirstLastElement()
+    {
+        $firstElement = str_replace('>', ' />', $this->getFirstElement());
+        return $firstElement;
+    }
+
     public function toXML()
     {
         $value = $this->getValue();
 
         if (is_array($value)) {
             $str = '';
-            foreach ($value as $valueElement) {
-                if ($valueElement instanceof Boorgeon_Plivo_Response_Element) {
-                    $str .= $valueElement->toXML();
+            foreach ($value as $element) {
+                if ($element instanceof Boorgeon_Plivo_Response_Element) {
+                    $str .= $element->toXML();
                 }
             }
 
             $this->setValue($str);
         } elseif ($value instanceof Boorgeon_Plivo_Response_Element) {
             $this->setValue($value->toXML());
+        } elseif (empty($value)) {
+            return $this->getFirstLastElement();
         }
 
         return $this->getFirstElement()

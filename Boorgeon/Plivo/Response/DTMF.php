@@ -12,6 +12,13 @@
 class Boorgeon_Plivo_Response_DTMF extends Boorgeon_Plivo_Response_Element
 {
 
+    public function __construct($digits)
+    {
+        parent::__construct();
+
+        $this->setValue($digits);
+    }
+
     /**
      * Get async
      *

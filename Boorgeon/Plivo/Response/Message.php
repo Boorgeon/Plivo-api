@@ -11,6 +11,13 @@
 class Boorgeon_Plivo_Response_Message extends Boorgeon_Plivo_Response_Element
 {
 
+    public function __construct($text)
+    {
+        parent::__construct();
+
+        $this->setValue($text);
+    }
+
     /**
      * Get src
      *

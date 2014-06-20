@@ -16,6 +16,13 @@
 class Boorgeon_Plivo_Response_Number extends Boorgeon_Plivo_Response_Element
 {
 
+    public function __construct($phonenumber)
+    {
+        parent::__construct();
+
+        $this->setValue($phonenumber);
+    }
+
     /**
      * Get send Digits
      *

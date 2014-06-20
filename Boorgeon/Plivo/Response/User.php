@@ -16,6 +16,13 @@
 class Boorgeon_Plivo_Response_User extends Boorgeon_Plivo_Response_Element
 {
 
+    public function __construct($sip)
+    {
+        parent::__construct();
+
+        $this->setValue($sip);
+    }
+
     /**
      * Get send Digits
      *

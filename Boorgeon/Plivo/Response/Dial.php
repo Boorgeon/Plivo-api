@@ -454,4 +454,36 @@ class Boorgeon_Plivo_Response_Dial extends Boorgeon_Plivo_Response_Element
         return $this;
     }
 
+    /**
+     * Get Number.
+     *
+     * @param string $phonenumber
+     *
+     * @return Boorgeon_Plivo_Response_Number
+     */
+    public function number($phonenumber)
+    {
+        $number = new Boorgeon_Plivo_Response_Number($phonenumber);
+
+        $this->_value[] = $number;
+
+        return $number;
+    }
+
+    /**
+     * Get User.
+     *
+     * @param string $sip
+     *
+     * @return Boorgeon_Plivo_Response_User
+     */
+    public function user($sip)
+    {
+        $user = new Boorgeon_Plivo_Response_User($sip);
+
+        $this->_value[] = $user;
+
+        return $user;
+    }
+
 }

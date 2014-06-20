@@ -353,4 +353,36 @@ class Boorgeon_Plivo_Response_GetDigits extends Boorgeon_Plivo_Response_Element
         return $this;
     }
 
+    /**
+     * Get Play.
+     *
+     * @param string $url
+     *
+     * @return Boorgeon_Plivo_Response_Play
+     */
+    public function play($url)
+    {
+        $play = new Boorgeon_Plivo_Response_Play($url);
+
+        $this->_value[] = $play;
+
+        return $play;
+    }
+
+    /**
+     * Get Speak.
+     *
+     * @param string $text
+     *
+     * @return Boorgeon_Plivo_Response_Speak
+     */
+    public function speak($text)
+    {
+        $speak = new Boorgeon_Plivo_Response_Speak($text);
+
+        $this->_value[] = $speak;
+
+        return $speak;
+    }
+
 }

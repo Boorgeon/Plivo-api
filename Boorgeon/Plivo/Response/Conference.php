@@ -16,6 +16,13 @@
 class Boorgeon_Plivo_Response_Conference extends Boorgeon_Plivo_Response_Element
 {
 
+    public function __construct($room)
+    {
+        parent::__construct();
+
+        $this->setValue($room);
+    }
+
     /**
      * Get muted
      *

@@ -360,6 +360,7 @@ class Boorgeon_Plivo_Response_ActionRequestParameters extends Boorgeon_Plivo_Obj
         $this->ConferenceMemberID = $ConferenceMemberID;
         return $this;
     }
-public $Digits;
+
+    public $Digits;
 
 }
