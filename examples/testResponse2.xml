@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?><Response><PreAnswer><Play>https://s3.amazonaws.com/plivocloud/Trumpet.mp3</Play></PreAnswer><Speak>Hey, thanks for dropping by</Speak><Hangup /></Response>
+<?xml version="1.0" encoding="UTF-8" ?>
+<Response>
+  <PreAnswer>
+    <Play>https://s3.amazonaws.com/plivocloud/Trumpet.mp3</Play>
+  </PreAnswer>
+<Speak>Hey, thanks for dropping by</Speak>
+<Hangup />
+</Response>
